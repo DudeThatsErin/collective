@@ -1,0 +1,363 @@
+/*
+Description: Erin's Collective Styling.
+Version: 0.0.1
+Author: Erin Skidds
+Author URL: https://erinskidds.com
+*/
+
+:root {
+    --font-monospace: "Source Code Pro", monospace;
+	/* Background */
+	--background-primary: #161616;
+	--background-primary-alt: #161616;
+	--background-secondary: #161616;
+	--background-secondary-alt: #161616;
+	--background-modifier-border: #63959ca2;
+	--interactive-accent: #63959c;
+	--interactive-accent-hover: #457076;
+	--vim-cursor: #63959c;
+
+	/* Text */
+	--text-normal: #faf2d6;
+	--text-faint: #bdae93;
+	--text-highlight-bg: #9dcad09a;
+	--text-link-internal: #83a598;
+	--text-link-external: #83a598;
+	--text-accent-hover: #7caab0;
+	--text-selection: #63959c;
+	--text-accent: #63959c;
+	--text-on-accent: #fff;
+
+	/* Heading */
+	--h1-color: #72d4d4;
+	--h2-color: #d57634;
+	--h3-color: #e5b567;
+	--h4-color: #a8c373;
+	--h5-color: #6c99bb;
+	--h6-color: #9386c8;
+
+	/* Code */
+	--code-block: #83a598;
+	--code-background: #101111;
+
+    /* Colors */
+   --cpt-crust: 18, 18, 18;
+   --cpt-crust-alt: 19, 19, 19;
+   --cpt-mantle: 20, 20, 20;
+   --cpt-mantle-alt: 22, 22, 22;
+   --cpt-core: 25, 25, 25;
+   --cpt-core-alt: 27, 27, 27;
+
+   --cpt-red: 175, 153, 176;
+   --cpt-orange: 213, 118, 52;
+   --cpt-yellow: 229, 181, 103;
+   --cpt-green: 168, 195, 115;
+   --cpt-cyan: 50, 181, 185;
+   --cpt-blue: 112, 122, 250;
+   --cpt-pink: 230, 99, 145;
+   --cpt-purple: 147, 134, 200;
+   --cpt-light-red: 255, 159, 136;
+   --cpt-light-pink: 255, 209, 234;
+   --cpt-light-blue: 184, 232, 231;
+
+   --cpt-black: 10, 10, 10;
+   --cpt-white: 240, 240, 240;
+   --cpt-text: 240, 240, 240;
+   --cpt-border: 50, 50, 50;
+
+   --color-accent: rgb(var(--cpt-accent));
+   --cpt-accent: var(--cpt-erin);
+   --cpt-erin: var(--cpt-blue);
+
+   /* Background */
+   --background-primary: rgb(var(--cpt-core));
+   --background-primary-alt: rgb(var(--cpt-core-alt));
+   --background-secondary: rgb(var(--cpt-mantle));
+   --background-secondary-alt: rgb(var(--cpt-mantle-alt));
+
+   --titlebar-background: rgb(var(--cpt-mantle));
+   --titlebar-background-focused: rgb(var(--cpt-crust));
+
+   --modal-border-color: rgb(var(--cpt-border));
+
+   /* Background Modifiers */
+   --background-modifier-border: rgb(var(--cpt-border));
+   --background-modifier-border-hover: rgb(var(--cpt-border));
+   --background-modifier-form-field: rgb(var(--cpt-crust));
+   --background-modifier-hover: rgb(var(--cpt-crust));
+
+   /* Interictive elements */
+   --interactive-normal: rgb(var(--cpt-crust));
+   --interactive-hover: rgb(var(--cpt-crust), 0.5);
+   --interactive-accent: rgb(var(--cpt-accent));
+   --interactive-accent-hover: rgba(var(--cpt-accent), 0.7);
+
+   /* Text */
+   --text-normal: rgb(var(--cpt-text));
+   --text-faint: rgba(var(--cpt-text), 0.7);
+   --text-muted: rgba(var(--cpt-text), 0.7);
+   --text-accent: rgb(var(--cpt-accent));
+   --text-accent-hover: rgba(var(--cpt-accent), 0.7);
+   --text-on-accent: var(--text-on-accent-inverted);
+   --text-selection: rgba(var(--cpt-accent), 0.1);
+}
+
+body {
+    background: var(--background-primary);
+    font: "iA Writer Mono S", monospace;
+    font-weight: bolder;
+
+    /* Headings */
+    --h1-font: Rubik;
+    --h2-font: Rubik;
+    --h3-font: Rubik;
+    --h4-font: Rubik;
+    --h5-font: Rubik;
+    --h6-font: Rubik;
+
+    --h1-size: 2.5em;
+    --h2-size: 2.75em;
+    --h3-size: 2em;
+    --h4-size: 2.25em;
+    --h5-size: 2em;
+    --h6-size: 1.75em;
+
+    /* Text */
+    --bold-colors: rgb(var(--cpt-red));
+    --italic-colors: rgb(var(--cpt-pink));
+}
+
+b, strong {
+    color: var(--bold-colors);
+    font-weight: bolder;
+}
+
+i, em {
+    color: var(--italic-colors);
+}
+
+s, strike {
+    text-decoration: line-through;
+    color: #FF9F88;
+}
+
+a, a:active, a:visited, a:link {
+    text-decoration: none;
+    color: rgb(var(--cpt-erin));
+}
+
+a:hover {
+    color: rgb(var(--cpt-light-blue));
+}
+
+a[href^="http"]::after,
+a[href^="https://"]::after,
+a[href^="#"]::after {
+    content: "";
+    width: 11px;
+    height: 11px;
+    margin-left: 4px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+}
+
+a[href^="https://dudethatserin.com"]::after
+{
+  display: none !important;
+}
+
+::selection {
+    background-color: var(--text-highlight-bg);
+}
+
+#main {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+}
+
+.collection {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.item {
+    display: block;
+    text-align: center;
+    height: 50px;
+    font-size: var(--h2-size);
+    background-color: rgb(var(--cpt-core));
+    border: 3px solid rgb(var(--cpt-border));
+    border-radius: 20px;
+    padding: 20px 0;
+    margin: 50px 0;
+    text-decoration: none;
+    color: #fff;
+}
+.item:hover {
+    text-decoration: underline;
+}
+
+.info {
+    border: 3px solid rgb(var(--cpt-border));
+    border-radius: 25px;
+    text-align: left;
+    margin-top: 40px;
+    color: #c7c7c7;
+    padding: 30px;
+    background-color: #525252;
+}
+
+h1, .info > h1, .info h1 {
+    text-align: center;
+    color: var(--h1-color);
+    border-bottom: 1px solid rgb(var(--cpt-border));
+    border-radius: 5px;
+    line-height: 0.8;
+    font-size: var(--h1-size) !important;
+    font: var(--h1-font);
+}
+
+h3, .info > h3, .info h3 {
+    text-align: left;
+    line-height: 0.5 !important;
+    font-size: var(--h3-size) !important;
+    font: var(--h3-font);
+    color: var(--h3-color);
+    padding: 0;
+    margin: 0;
+}
+
+.info blockquote {
+    border-left: 8px solid #9386c8;
+    padding: 10px;
+    text-align: inline;
+    border-radius: 10px;
+    border-top: 1px solid #9386c8;
+    border-right: 1px solid #9386c8;
+    border-bottom: 1px solid #9386c8;
+    background-color: #38344a;
+}
+
+/* SECTIONS */
+.collective, .wiki, .appseeker, .dtm, .la, .enth {
+    opacity: 0.5;
+    text-decoration: none;
+}
+.collective:hover, .wiki:hover, .appseeker:hover, .dtm:hover, .la:hover, .enth:hover {
+    opacity: 0.8;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.collective {
+    background-color: none;
+    color: rgb(var(--cpt-erin));
+}
+
+.collective:hover {
+    border: 3px solid rgb(var(--cpt-blue));
+    color: rgb(var(--cpt-accent));
+}
+
+.wiki {
+    background-image: url("https://i.imgur.com/1pVqqI3.png");
+    color: rgb(var(--cpt-light-pink));
+    background-position: center;
+}
+
+.wiki:hover {
+    color: rgb(var(--cpt-light-red));
+    border-color: rgb(var(--cpt-light-red));
+}
+
+.appseeker {
+    background-image: url("https://i.imgur.com/1pVqqI3.png");
+    color: rgb(var(--cpt-light-blue));
+    background-position: center;
+}
+
+.appseeker:hover {
+    color: rgb(var(--cpt-green));
+    border-color: rgb(var(--cpt-green));
+}
+
+.dtm {
+    background-image: url("https://i.imgur.com/yZldbZa.png");
+    color: rgb(var(--cpt-white));
+    background-position: top;
+}
+
+.dtm:hover {
+    color: rgb(var(--cpt-pink));
+    border-color: rgb(var(--cpt-pink));
+}
+
+.la {
+    background-color: none;
+    color: var(--h4-color);
+}
+
+.la:hover {
+    border-color: var(--h2-color);
+    color: var(--h2-color);
+}
+
+.enth {
+    background-color: none;
+    color: var(--code-block);
+}
+
+.enth:hover {
+    border-color: rgb(var(--cpt-cyan));
+    color: rgb(var(--cpt-cyan));
+}
+
+.coming-soon {
+    display: block;
+    text-align: center;
+    height: 50px;
+    font-size: var(--h1-size);
+    background-color: rgb(var(--cpt-core));
+    border: 3px solid rgb(var(--cpt-border));
+    border-radius: 20px;
+    padding: 20px;
+    margin: 50px 0;
+    text-decoration: none;
+    opacity: 0.3;
+    color: #457076;
+}
+
+.soon {
+    display: block;
+    font-size: 10px;
+}
+
+.coming-soon:hover {
+    opacity: 0.8;
+}
+
+/* RESPONSIVENESS */
+@media screen and (max-width: 600px) {
+    .item {
+        line-height: 50px;
+        font-size: var(--h4-size);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .item {
+        line-height: 50px;
+        font-size: var(--h5-size);
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .item {
+        line-height: 50px;
+        font-size: 12px;
+    }
+}
