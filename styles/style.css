@@ -341,23 +341,56 @@ h3, .info > h3, .info h3 {
 }
 
 /* RESPONSIVENESS */
+@media screen and (max-width: 1100px) {
+    .item {
+        line-height: 4 !important;
+        font-size: 16px;
+    }
+    .soon {
+        margin-bottom: -35px;
+    }
+}
 @media screen and (max-width: 600px) {
     .item {
-        line-height: 50px;
-        font-size: var(--h4-size);
+        line-height: 4 !important;
+        font-size: 14px;
+    }
+    .soon {
+        margin-bottom: -25px;
+    }
+    a[href^="http"]::after,
+    a[href^="https://"]::after,
+    a[href^="#"]::after {
+        display: none;
     }
 }
 
 @media screen and (max-width: 400px) {
     .item {
-        line-height: 50px;
-        font-size: var(--h5-size);
+        line-height: 4 !important;
+        font-size: 12px;
+    }
+    .soon {
+        margin-bottom: -25px;
+    }
+    a[href^="http"]::after,
+    a[href^="https://"]::after,
+    a[href^="#"]::after {
+        display: none;
     }
 }
 
 @media screen and (max-width: 300px) {
     .item {
-        line-height: 50px;
-        font-size: 12px;
+        line-height: 5 !important;
+        font-size: 10px;
+    }
+    .soon {
+        margin-bottom: -25px;
+    }
+    a[href^="http"]::after,
+    a[href^="https://"]::after,
+    a[href^="#"]::after {
+        display: none;
     }
 }
