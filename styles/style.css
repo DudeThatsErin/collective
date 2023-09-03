@@ -255,17 +255,17 @@ h3, .info > h3, .info h3 {
 
 .collective {
     background-color: none;
-    color: rgb(var(--cpt-erin));
+    color: rgb(var(--cpt-erin)) !important;
 }
 
 .collective:hover {
     border: 3px solid rgb(var(--cpt-blue));
-    color: rgb(var(--cpt-accent));
+    color: rgb(var(--cpt-accent)) !important;
 }
 
 .wiki {
     background-image: url("https://i.imgur.com/1pVqqI3.png");
-    color: rgb(var(--cpt-light-pink));
+    color: rgb(var(--cpt-light-pink)) !important;
     background-position: center;
 }
 
@@ -276,44 +276,44 @@ h3, .info > h3, .info h3 {
 
 .appseeker {
     background-image: url("https://i.imgur.com/1pVqqI3.png");
-    color: rgb(var(--cpt-light-blue));
+    color: rgb(var(--cpt-light-blue)) !important;
     background-position: center;
 }
 
 .appseeker:hover {
-    color: rgb(var(--cpt-green));
+    color: rgb(var(--cpt-green)) !important;
     border-color: rgb(var(--cpt-green));
 }
 
 .dtm {
     background-image: url("https://i.imgur.com/yZldbZa.png");
-    color: rgb(var(--cpt-white));
+    color: rgb(var(--cpt-white)) !important;
     background-position: top;
 }
 
 .dtm:hover {
-    color: rgb(var(--cpt-pink));
+    color: rgb(var(--cpt-pink)) !important;
     border-color: rgb(var(--cpt-pink));
 }
 
 .la {
     background-color: none;
-    color: var(--h4-color);
+    color: var(--h4-color) !important;
 }
 
 .la:hover {
     border-color: var(--h2-color);
-    color: var(--h2-color);
+    color: var(--h2-color) !important;
 }
 
 .enth {
     background-color: none;
-    color: var(--code-block);
+    color: var(--code-block) !important;
 }
 
 .enth:hover {
     border-color: rgb(var(--cpt-cyan));
-    color: rgb(var(--cpt-cyan));
+    color: rgb(var(--cpt-cyan)) !important;
 }
 
 .coming-soon {
@@ -328,7 +328,7 @@ h3, .info > h3, .info h3 {
     margin: 50px 0;
     text-decoration: none;
     opacity: 0.3;
-    color: #457076;
+    color: #457076 !important;
 }
 
 .soon {
